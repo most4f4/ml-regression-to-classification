@@ -5,10 +5,10 @@ import numpy as np
 from tensorflow.keras.models import load_model
 
 
-model = load_model("./models/cat_dog_classifier_nn_sigmoid.h5")
+model = load_model("./models/cat_dog_classifier_cnn_sigmoid.h5")
 
 image = cv2.imread('./test_images/cat_test2.jpg')  # Load a test image
-image = cv2.resize(image, (64, 64))  # Resize the image to 64x64 pixels
+image = cv2.resize(image, (32, 32))  # Resize the image to 32x32 pixels
 image = image / 255.0  # Normalize the image
 image = image.flatten()  # Flatten the image to a 1D array
 
